@@ -7,6 +7,7 @@ import javax.swing.JFrame;
  *  Rectangle, Line2D.Double, Ellipse2D.Double
  *  
  * @author P. Conrad 
+ * @author Andrew Polk
  * @version for UCSB CS56, W16
  */
 
