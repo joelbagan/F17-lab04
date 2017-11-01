@@ -26,17 +26,17 @@ public class AllMyDrawings
 	Ring r1 = new Ring(100,250,25);
 	g2.setColor(Color.RED); g2.draw(r1);
 	
-	// Make a gray ring that's half the size, 
-	// and moved over 150 pixels in x direction
+	// Make a gray ring that's a third of the original size, 
+	// and moved over 125 pixels in x direction
 	
-	Shape r2 = ShapeTransforms.scaledCopyOfLL(r1,0.5,0.5);
-	r2 = ShapeTransforms.translatedCopyOf(r2,150,0);
+	Shape r2 = ShapeTransforms.scaledCopyOfLL(r1,0.33,0.33);
+	r2 = ShapeTransforms.translatedCopyOf(r2,125,0);
 	g2.setColor(Color.GRAY); g2.draw(r2);
 	
-	// Here's a ring that's 4x as big (2x the original)
-	// and moved over 150 more pixels to right.
-	r2 = ShapeTransforms.scaledCopyOfLL(r2,4,4);
-	r2 = ShapeTransforms.translatedCopyOf(r2,150,0);
+	// Here's a ring that's 6x as big (2x the original)
+	// and moved over 150 down.
+	r2 = ShapeTransforms.scaledCopyOfLL(r2,6,6);
+	r2 = ShapeTransforms.translatedCopyOf(r2,0,150);
 	
 	// We'll draw this with a thicker stroke
 	Stroke thick = new BasicStroke (4.0f, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL);       
@@ -52,11 +52,15 @@ public class AllMyDrawings
 	
 	// Draw two Jeweled Rings
 	
-	JeweledRing jr1 = new JeweledRing(50,350,40);
-	JeweledRing jr2 = new JeweledRing(200,350,20);
+	JeweledRing jr1 = new JeweledRing(100,350,40);
+	JeweledRing jr2 = new JeweledRing(400,350,80);
+	
+	Shape jr3 = ShapeTransforms.translatedCopyOf(jr2, -100, -250);
+	Shape jr4 = ShapeTransforms.rotatedCopyOf(jr3, 2);
 	
 	g2.draw(jr1);
 	g2.setColor(new Color(0x8F00FF)); g2.draw(jr2);
+	g2.setColor(Color.YELLOW); g2.draw(jr4);
 	
 	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	
@@ -84,7 +88,7 @@ public class AllMyDrawings
 	// Make a ring that's half the size, 
 	// and moved over 150 pixels in x direction
 	Shape r2 = ShapeTransforms.scaledCopyOfLL(r1,0.5,0.5);
-	r2 = ShapeTransforms.translatedCopyOf(r2,150,0);
+	r2 = ShapeTransforms.translatedCopyOf(r2,150,-100);
 	g2.setColor(Color.BLACK); g2.draw(r2);
 	
 	// Here's a ring that's 4x as big (2x the original)
@@ -117,6 +121,12 @@ public class AllMyDrawings
 	
 	g2.draw(jr3);
 	
+	// Translate the first ring 200 pixels down and rotate it 270 degrees around its center
+	Shape jr4 = ShapeTransforms.translatedCopyOf(jr1, 0, 200);
+	Shape jr5 = ShapeTransforms.rotatedCopyOf(jr4, Math.PI*3.0/2.0);
+	
+	g2.draw(jr5);
+	
 	// @@@ FINALLY, SIGN AND LABEL YOUR DRAWING
 	
 	g2.setStroke(orig);
@@ -143,6 +153,9 @@ public class AllMyDrawings
 	g2.setColor(Color.GREEN);   g2.draw(smallRing);
 	
 	JeweledRing jr1 = new JeweledRing(200,200,100);
-	g2.setColor(Color.BLACK);	g2.draw(jr1);
+	
+	Shape jr2 = ShapeTransforms.rotatedCopyOf(jr1, 3);
+	
+	g2.setColor(Color.BLACK);	g2.draw(jr2);
     }       
 }
