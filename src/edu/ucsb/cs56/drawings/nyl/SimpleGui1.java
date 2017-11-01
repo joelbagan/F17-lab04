@@ -7,7 +7,7 @@ import javax.swing.*;
     
     @author Head First Java, 2nd Edition p. 355
     @author P. Conrad (who only typed it in and added the Javadoc comments)
-    @author: Nery Yaritza Lara Mancia
+    @author Nery Yaritza Lara Mancia
     @version CS56, Fall 2017, UCSB
 */
 

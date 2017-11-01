@@ -7,7 +7,7 @@ import java.awt.geom.Rectangle2D;
    A Collage Frame
       
    @author Nery Yaritza Lara Mancia 
-   @version for CS56, W16, UCSB
+   @version for CS56, W17, UCSB
    
 */
 public class Collage extends Frame implements Shape

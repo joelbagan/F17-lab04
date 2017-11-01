@@ -1,6 +1,6 @@
 <project default="compile">
 
-  <!-- build.xml for lab06, m16, CS56
+  <!-- build.xml for lab04, F17, CS56
        author: Phill Conrad
        Note: for this lab, you should not need to edit this file -->
 
@@ -15,7 +15,7 @@
    
    <property name="webRoot" value="${env.HOME}/public_html/cs56" />
    <property name="webBaseURL" value="http://www.cs.ucsb.edu/~${env.USER}/cs56" />
-   <property name="projectName" value="W16-lab04" /> 
+   <property name="projectName" value="F17-lab04" /> 
    <property name="javadocDest" value="${webRoot}/${projectName}/javadoc" /> 
    <property name="javadocURL" value="${webBaseURL}/${projectName}/javadoc" /> 
    <property name="imagesDest" value="${webRoot}/${projectName}/images" /> 
